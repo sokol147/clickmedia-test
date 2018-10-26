@@ -1,0 +1,55 @@
+.review{
+  &__content{
+    padding: 3rem 0.9rem;
+  }
+  &__header{
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  &__image{
+    height: 125px;
+    width: 125px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  &__author{
+    font-family: 'Bebas Neue';
+    font-size: 2.25rem;
+    text-align: center;
+  }
+  &__text{
+    font-size: 1.125rem;
+    color: $review-text;
+    text-align: justify;
+  }
+  .carousel__item{
+    padding: 0 5px;
+  }
+}
+.owl-carousel .owl-item img{
+  max-width: 100%;
+  width: auto;
+}
+.owl-theme .owl-dots .owl-dot span{
+  background: $slider-dot;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+  background: $slider-dot-active;
+}
+
+@media only screen and (min-width: 550px){
+  .review__item{
+    display: flex;
+  }
+  .review__image{
+    margin-right: 3.4375rem;
+  }
+  .review__author{
+    text-align: left;
+    margin-top: 20px;
+  }
+}

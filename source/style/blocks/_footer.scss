@@ -1,0 +1,142 @@
+.footer{
+  background: $bg-footer;
+  color: #ffffff;
+  &__header{
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    font-family: 'BebasNeue';
+    font-weight: bold;
+  }
+  &__info{
+    margin-bottom: 1.5rem;
+  }
+  &__menu{
+    margin-bottom: 1.5rem;
+  }
+  &__form{
+    margin-bottom: 1.5rem;
+  }
+  &__content{
+    padding: 0.9rem;
+  }
+  &__logo{
+    text-decoration: none;
+    font-family: 'BebasNeue';
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .logo__description{
+    font-size: 0.875rem;
+    font-style: italic;
+    color: $text-footer;
+  }
+}
+.site-map{
+  &__list{
+    column-count: 2;
+  }
+  &__item{
+    margin-bottom: 1rem;
+    &:hover{
+      .site-map__link{
+        color: #ffffff;
+      }
+    }
+  }
+  &__link{
+    text-decoration: none;
+    font-family: 'BebasNeue';
+    font-size: 1.125rem;
+    color: $text-site-map;
+    transition: .3s;
+    display: block;
+  }
+}
+.subscribe{
+  &__input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    border: 1px solid $border-footer;
+    box-sizing: border-box;
+    padding: 0 0.5rem 0 1.6rem;
+    background: transparent;
+    color: $footer-placholder;
+    &::placeholder{
+      color: $footer-placholder;
+    }
+  }
+  &__btn{
+    background: $accent-brown;
+    border: none;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'BebasNeue';
+    color: $footer-btn;
+    font-size: 1.125rem;
+    transition: .3s;
+    &:hover{
+      background: darken($accent-brown, 10%);
+    }
+  }
+}
+.copyright{
+  display: flex;
+  &__text{
+    color: $footer-placholder;
+  }
+  .social{
+    &__list{
+      margin-left: auto;
+      display: flex;
+    }
+    &__item{
+      &:not(:first-child){
+        margin-left: 1rem;
+      }
+    }
+    &__link{
+      color: $footer-icons;
+    }
+  }
+}
+
+@media only screen and(min-width: 350px){
+  .subscribe{
+    position: relative;
+  }
+  .subscribe__btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+  }
+  .subscribe__input{
+    padding-right: 160px;
+  }
+  .footer__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer__form{
+    grid-column: 1/3;
+  }
+  .footer__copyright{
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and(min-width: 1000px){
+  .footer__content{
+    grid-template-columns: 31.7% 38.5% 29.8%;
+  }
+  .footer__form{
+    grid-column-start: 3;
+  }
+  .footer__copyright{
+    grid-column: 1/4;
+  }
+}

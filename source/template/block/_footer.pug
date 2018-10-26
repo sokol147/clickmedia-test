@@ -1,0 +1,60 @@
+- let footerLink = 'ALW Logo'
+- let logoDescr = 'American Logo Watch'
+- let footerMenuHeader = 'Menu'
+-
+  let menu = [
+    {
+      link: '#',
+      text: 'Shop'
+    },{
+      link: '#',
+      text: 'Services'
+    },{
+      link: '#',
+      text: 'FAQs'
+    },{
+      link: '#',
+      text: 'Contact Us'
+    },{
+      link: '#',
+      text: 'My Account'
+    }
+  ]
+- let footerFormHeader = 'Sign Up For Our Newsletter'
+- let formPlaceholder = 'Enter email'
+- let formBtn = 'Send'
+- let copyrightText = 'All rights reserved 2018'
+-
+  let social = [
+    {
+      link: '#',
+      icon: 'fab fa-twitter'
+    },{
+      link: '#',
+      icon: 'fab fa-facebook-square'
+    }
+  ]
+footer.footer
+  .section__container
+    .footer__content
+      .footer__info
+        a.footer__logo(href='/index.html')= footerLink
+        p.logo__description= logoDescr
+      .footer__menu
+        h4.footer__header= footerMenuHeader
+        ul.site-map__list
+          each item in menu
+            li.site-map__item
+              a.site-map__link(href=`${item.link}`)= item.text
+      .footer__form
+        h4.footer__header= footerFormHeader
+        form(action="").form--subscribe.subscribe
+          input.subscribe__input(type="mail" placeholder=`${formPlaceholder}`)
+          button.subscribe__btn(type='submite')= formBtn
+      .footer__copyright.copyright
+        p.copyright__text= copyrightText
+        ul.footer__social.social__list
+          each item in social
+            li.social__item
+              a.social__link(href=`${item.link}`)
+                i.social__icon(class=`${item.icon}`)

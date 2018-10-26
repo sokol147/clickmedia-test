@@ -1,0 +1,40 @@
+- let sectionHeader = 'What Customers Are Saying'
+-
+  let reviews = [
+    {
+      photo: 'author-one',
+      author: 'Amanda Smith',
+      text: 'As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.'
+    },{
+      photo: 'author-two',
+      author: 'Sandra  Willims',
+      text: 'As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.'
+    },{
+      photo: 'author-one',
+      author: 'Sandra  Willims',
+      text: 'As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.'
+    },{
+      photo: 'author-two',
+      author: 'Amanda Smith',
+      text: 'As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.'
+    },{
+      photo: 'author-one',
+      author: 'Sandra  Willims',
+      text: 'As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.'
+    },{
+      photo: 'author-two',
+      author: 'Amanda Smith',
+      text: 'As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.'
+    }
+  ]
+section.review
+  .section__container
+    .review__content
+      h3.review__header= sectionHeader
+      ul.review__carousel.review__list.owl-carousel.owl-theme
+        each item in reviews
+          li.review__item
+            img(src=`/templates/images/${item.photo}.jpg` alt=`${item.author} photo`).review__image
+            article.review__article
+              h4.review__author= item.author
+              p.review__text= item.text
