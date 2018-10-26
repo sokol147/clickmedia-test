@@ -34,7 +34,7 @@ section.review
       ul.review__carousel.review__list.owl-carousel.owl-theme
         each item in reviews
           li.review__item
-            img(src=`/templates/images/${item.photo}.jpg` alt=`${item.author} photo`).review__image
+            img(src=`templates/images/${item.photo}.jpg` alt=`${item.author} photo`).review__image
             article.review__article
               h4.review__author= item.author
               p.review__text= item.text
