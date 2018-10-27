@@ -1,4 +1,4 @@
-- let sectionHeader = 'What Customers Are Saying'
+- let reviewHeader = 'What Customers Are Saying'
 -
   let reviews = [
     {
@@ -30,7 +30,7 @@
 section.review
   .section__container
     .review__content
-      h3.review__header= sectionHeader
+      h3.review__header= reviewHeader
       ul.review__carousel.review__list.owl-carousel.owl-theme
         each item in reviews
           li.review__item

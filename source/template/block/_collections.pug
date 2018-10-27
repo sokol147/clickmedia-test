@@ -1,0 +1,74 @@
+- let collectionsHeader = 'Collections'
+-
+  let tabControl = [
+    {
+      active: 'active',
+      text: 'Latest'
+    },{
+      active: '',
+      text: 'Popular'
+    }
+  ]
+-
+  let latest = [
+    {
+      image: 'collection-one',
+      title: 'Adriatica ADR',
+      price: '650, 00 '
+    },{
+      image: 'collection-two',
+      title: 'SEIKO SNZG07K1',
+      price: '125, 00 '
+    },{
+      image: 'collection-three',
+      title: 'ROAMER RM 220837',
+      price: '250, 00 '
+    },{
+      image: 'collection-two',
+      title: 'Adriatica ADR',
+      price: '650, 00 '
+    }
+  ]
+-
+  let popular = [
+    {
+      image: 'collection-three',
+      title: 'ROAMER RM 220837',
+      price: '250, 00 '
+    },{
+      image: 'collection-two',
+      title: 'Adriatica ADR',
+      price: '650, 00 '
+    },{
+      image: 'collection-one',
+      title: 'Adriatica ADR',
+      price: '650, 00 '
+    },{
+      image: 'collection-two',
+      title: 'SEIKO SNZG07K1',
+      price: '125, 00 '
+    }
+  ]
+section.collections
+  .section__container
+    .collections__content
+      h3.collections__header= collectionsHeader
+      ul.collection-tabs__control.tab-control__list
+        each item in tabControl
+          li.tab-control__item(class=`${item.active}`)
+            a.tab-control__link(href='#')= item.text
+      ul.collection-tabs__content.tab-content__list
+        li.tab-content__item.active
+          ul.latest__list.collections__carousel.owl-carousel.owl-theme
+            each item in latest
+              li.latest__item
+                img(src=`templates/images/${item.image}.png` alt=`${item.title} Photo`).latest__image
+                p.latest__title= item.title
+                p.latest__price= item.price
+        li.tab-content__item
+          ul.latest__list.collections__carousel.owl-carousel.owl-theme
+              each item in popular
+                li.latest__item
+                  img(src=`templates/images/${item.image}.png` alt=`${item.title} Photo`).latest__image
+                  p.latest__title= item.title
+                  p.latest__price= item.price
