@@ -1,0 +1,65 @@
+.service{
+  background: url(../images/bg-service.jpg) no-repeat 143%;
+  background-size: cover;
+  &__content{
+    padding: 3rem 0.9rem;
+    position: relative;
+    z-index: 10;
+  }
+  &__title{
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
+  }
+  &__text{
+    color: $service-text;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+  &__carousel{
+    padding-top: 3rem;
+  }
+  .owl-nav{
+    position: absolute;
+    top: 0;
+  }
+  .owl-prev{
+    width: 25px;
+    height: 17px;
+    background: url(../images/arrow-left-white.png) no-repeat !important;
+    span{
+      display: none;
+    }
+  }
+  .owl-next{
+    width: 25px;
+    height: 17px;
+    background: url(../images/arrow-right-white.png) no-repeat !important;
+    span{
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 760px){
+  .service__content{
+    display: flex;
+  }
+  .service__carousel{
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 960px){
+  .service__content{
+    padding: 12.5rem 0.9rem;
+  }
+  .service{
+    background: url(../images/bg-service.jpg) no-repeat 40%;
+    background-size: cover;
+  }
+  .service__text{
+    line-height: 40px;
+    text-align: left;
+  }
+}

@@ -36,6 +36,23 @@ $(document).ready(function(){
 		}
 	})
 
+	$('.service__carousel').owlCarousel({
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		loop: true,
+		nav: true,
+		dots: false,
+		margin: 10,
+		autoplay: true,
+		autoplayTimeout: 10000,
+		smartSpeed: 700,
+		responsive: {
+			0: {
+				items: 1
+			}
+		}
+	})
+
 	$('.tab-control__link').on('click', function(e){
 		e.preventDefault();
 
