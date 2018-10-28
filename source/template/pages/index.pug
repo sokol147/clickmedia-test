@@ -1,11 +1,14 @@
 extends ../_template
 
 block variables
-	- var title = ['Title','index page description','index page keywords']
+	- var title = ['ALW | Home','index page description','index page keywords']
 
 block content
 	//- <---- Example ---->
 	//- include ../folder/file_name
+	include ../block/_top-bar
+	include ../block/_header
+	include ../block/_home-screen
 	include ../block/_services
 	include ../block/_collections
 	include ../block/_partners

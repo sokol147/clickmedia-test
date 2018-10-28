@@ -1,0 +1,148 @@
+.header{
+  .nav-bar{
+    padding: 3rem 0.9rem 1rem;
+    position: relative;
+  }
+  .logo{
+    font-family: 'Bebas Neue';
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
+    &__text{
+      font-weight: normal;
+      font-family: 'PT Sans';
+      font-size: 0.875rem;
+      color: $text-footer;
+      font-style: italic;
+      width: 100%;
+      display: block;
+    }
+  }
+  .menu{
+    &__list{
+      padding-top: 1rem;
+    }
+    &__item{
+      margin-bottom: 0.6rem;
+    }
+    &__link{
+      font-family: 'Bebas Neue';
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.125rem;
+      font-weight: bold;
+      transition: .3s;
+      &:hover{
+        color: $accent-brown;
+        border-bottom: 2px solid $accent-brown;
+      }
+    }
+  }
+  .nav__phone{
+    font-family: 'Bebas Neue';
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    &:before{
+      content: url(../images/phone-icon.png);
+      vertical-align: text-top;
+      margin-right: 10px;
+    }
+  }
+  .menu-btn__wrapper{
+    position: absolute;
+    top: 3.8rem;
+    right: 1rem;
+  }
+  .nav__wrapper{
+    display: none;
+  }
+}
+.menu-btn{
+  display: block;
+  background-color: transparent;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: relative;
+}
+.menu-btn__line,
+.menu-btn__line:before,
+.menu-btn__line:after{
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -11px;
+  transition: .3s;
+}
+.menu-btn__line:before,
+.menu-btn__line:after{
+  content: '';
+}
+.menu-btn__line:before{
+  transform: translateY(-5px);
+}
+.menu-btn__line:after{
+  transform: translateY(5px);
+}
+
+.menu-btn--active{
+  .menu-btn__line{
+    background-color: transparent;
+    &:before{
+      transform: rotate(45deg);
+    }
+    &:after{
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media only screen and (min-width: 980px){
+  .menu-btn__wrapper{
+    display: none;
+  }
+  .header .nav__wrapper{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .header .menu__list{
+    padding-top: 0;
+  }
+  .header .menu__item{
+    margin-bottom: 0;
+    &:not(:last-child){
+      margin-right: 3.75rem;
+    }
+  }
+  .menu__list{
+    display: flex;
+  }
+  .nav-bar{
+    display: flex;
+    align-items: center;
+  }
+  .nav__phone{
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .nav__phone{
+    margin-left: 10rem;
+  }
+  .header .logo__text{
+    display: inline;
+    margin-left: 1rem;
+    vertical-align: middle;
+  }
+}

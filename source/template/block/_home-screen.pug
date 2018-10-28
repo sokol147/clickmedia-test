@@ -1,0 +1,32 @@
+-
+  let homeSlider = [
+    {
+      header: 'Custom Watches For Any Occasion',
+      btnOne: 'Design & Order',
+      btnTwo: 'Request Virtual Samмple'
+    },{
+      header: 'One more Important Text For Slider',
+      btnOne: 'Button One',
+      btnTwo: 'Button Two'
+    },{
+      header: 'Secont Text Section For Slider',
+      btnOne: 'Lorem & Co',
+      btnTwo: 'Co & Lorem'
+    },{
+      header: 'Lorem ipsum dolor sit amet',
+      btnOne: 'Button Lor',
+      btnTwo: 'Lor & Button'
+    },
+  ]
+section.home
+  .section__container
+    .home__content
+      ul.home__slider.slider__list.owl-carousel.owl-theme
+        each item in homeSlider
+          li.slider__item
+            h2.slider__header= item.header
+            ul.slide__buttons.button__list
+              li.button__item
+                a.button__link(href='#')= item.btnOne
+              li.button__item
+                a.button__link(href='#')= item.btnTwo

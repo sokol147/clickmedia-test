@@ -1,0 +1,44 @@
+.home{
+  background: url(../images/bg-main.jpg) no-repeat center center;
+  background-size: cover;
+  &__content{
+    padding: 8.75rem 0.9rem 5.3125rem;
+  }
+  .owl-dots{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .slider{
+    &__list{
+      position: relative;
+    }
+    &__header{
+      font-family: 'Bebas Neue';
+      font-size: 3rem;
+      line-height: 4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .button__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+  }
+  .button__item{
+    margin-right: 1rem;
+    &:not(:last-child){
+      margin-bottom: 1rem;
+    }
+  }
+  .button__link{
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid $accent-brown;
+    padding: 1rem 1.875rem;
+    text-decoration: none;
+    color: $accent-brown;
+    font-family: 'Bebas Neue';
+    font-weight: bold;
+  }
+}
