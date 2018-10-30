@@ -1,0 +1,13 @@
+.popup.popup--login
+  .popup__content
+    a.popup__close(href='#')
+      i.fas.fa-times
+    p.popup__header Sign in
+    form.popup__form(action="")
+      .form__field
+        label.popup__label(for='login') Login
+        input.popup__input(type='text' placeholder='Login' id='login')
+      .form__field
+        label.popup__label(for='password') Password
+        input.popup__input(type='password' placeholder='Password' id='password')
+      button(type='submite').popup__button Sign in

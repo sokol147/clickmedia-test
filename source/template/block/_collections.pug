@@ -62,13 +62,17 @@ section.collections
           ul.latest__list.collections__carousel.owl-carousel.owl-theme
             each item in latest
               li.latest__item
-                img(src=`templates/images/${item.image}.png` alt=`${item.title} Photo`).latest__image
-                p.latest__title= item.title
+                a(href='#').product__link
+                  img(src=`templates/images/${item.image}.png` alt=`${item.title} Photo`).latest__image
+                a(href='#').product__link
+                  p.latest__title= item.title
                 p.latest__price= item.price
         li.tab-content__item
           ul.latest__list.collections__carousel.owl-carousel.owl-theme
               each item in popular
                 li.latest__item
-                  img(src=`templates/images/${item.image}.png` alt=`${item.title} Photo`).latest__image
-                  p.latest__title= item.title
+                  a(href='#').product__link
+                    img(src=`templates/images/${item.image}.png` alt=`${item.title} Photo`).latest__image
+                  a(href='#').produce__link
+                    p.latest__title= item.title
                   p.latest__price= item.price

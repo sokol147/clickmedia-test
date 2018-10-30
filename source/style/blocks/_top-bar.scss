@@ -1,7 +1,7 @@
 .top-bar{
   background: $bg-footer;
   &__content{
-    padding: 0.9rem;
+    padding: 1.1rem 0.9rem;
   }
   &__text{
     font-size: 0.875rem;
@@ -48,5 +48,14 @@
   }
   .top-bar__list{
     margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 1400px){
+  .top-bar__content{
+    padding: 1.1rem 0;
+  }
+  .top-bar__item:not(:last-child){
+    margin-right: 3.3rem;
   }
 }

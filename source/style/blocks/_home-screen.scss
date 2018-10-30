@@ -14,7 +14,7 @@
       position: relative;
     }
     &__header{
-      font-family: 'Bebas Neue';
+      font-family: 'BebasNeue';
       font-size: 3rem;
       line-height: 4rem;
       margin-bottom: 2.5rem;
@@ -34,11 +34,51 @@
   .button__link{
     display: inline-block;
     box-sizing: border-box;
-    border: 2px solid $accent-brown;
+    border: 1px solid $accent-brown;
     padding: 1rem 1.875rem;
     text-decoration: none;
     color: $accent-brown;
-    font-family: 'Bebas Neue';
+    font-family: 'BebasNeue';
     font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .home__slider{
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1400px){
+  .home__content{
+    padding: 6.77rem 0 5.3125rem;
+  }
+  .home .slider__header{
+    font-size: 5rem;
+    line-height: 6.05rem;
+    letter-spacing: 0.1rem;
+    max-width: 650px;
+    margin-bottom: 3.4rem;
+  }
+  .slide__buttons{
+    margin-left: 0.6rem;
+  }
+  .home .button__link{
+    letter-spacing: 0.18rem;
+  }
+  .home .button__item{
+    margin-right: 2rem;
+  }
+  .home .button__list{
+    margin-bottom: 13.2rem;
+  }
+  .home .owl-theme .owl-dots .owl-dot span{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin: 5px 9px;
+  }
+  .home{
+    background: url(../images/bg-main.jpg) no-repeat center bottom;
   }
 }

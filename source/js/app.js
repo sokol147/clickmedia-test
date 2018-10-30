@@ -5,10 +5,25 @@ $(document).ready(function(){
 		$('.nav__wrapper').slideToggle();
 	});
 
+	$('.search__link').on('click', function(e){
+		e.preventDefault();
+		$('.popup--search').fadeIn();
+	});
+
+	$('.popup__close').on('click', function(e){
+		e.preventDefault();
+		$('.popup').fadeOut();
+	});
+
+	$('.login__link').on('click', function(e){
+		e.preventDefault();
+		$('.popup--login').fadeIn();
+	})
+
   $('.review__carousel').owlCarousel({
     loop: true,
     dots: true,
-    margin: 10,
+    margin: 16,
 		autoplay: true,
 		autoplayTimeout: 10000,
 		smartSpeed: 700,
@@ -28,7 +43,7 @@ $(document).ready(function(){
 		loop: true,
 		nav: false,
 		dots: true,
-		// autoplay: true,
+		autoplay: true,
 		margin: 20,
 		autoplayTimeout: 10000,
 		smartSpeed: 700,
@@ -44,7 +59,7 @@ $(document).ready(function(){
 		nav: true,
 		autoplay: true,
 		dots: false,
-		margin: 50,
+		margin: 65,
 		autoplayTimeout: 10000,
 		smartSpeed: 700,
 		responsive: {

@@ -4,7 +4,7 @@
   }
   &__header{
     text-align: center;
-    font-family: 'Bebas Neue';
+    font-family: 'BebasNeue';
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
@@ -17,7 +17,7 @@
     margin-bottom: 1rem;
   }
   &__author{
-    font-family: 'Bebas Neue';
+    font-family: 'BebasNeue';
     font-size: 2.25rem;
     text-align: center;
   }
@@ -50,6 +50,37 @@
   }
   .review__author{
     text-align: left;
-    margin-top: 20px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1400px){
+  .review__content{
+    padding: 4.3rem 0 4.9rem;
+  }
+  .review__header{
+    font-size: 3rem;
+    margin-bottom: 6.8rem;
+    padding-left: 12px;
+  }
+  .review__item{
+    padding-right: 135px;
+  }
+  .review__image{
+    width: 121px;
+    height: 121px;
+    margin-right:  3.6375rem;
+  }
+  .review__text{
+    line-height: 2.2rem;
+  }
+  .review .owl-theme .owl-dots .owl-dot span{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+  }
+  .review .owl-theme .owl-nav.disabled+.owl-dots{
+    margin-top: 86px;
   }
 }

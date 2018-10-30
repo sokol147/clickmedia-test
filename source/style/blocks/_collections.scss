@@ -6,7 +6,7 @@
   &__header{
     font-size: 3rem;
     text-align: center;
-    font-family: 'Bebas Neue';
+    font-family: 'BebasNeue';
     margin-bottom: 1rem;
   }
   .latest__list{
@@ -19,7 +19,6 @@
     &__image{
       margin: 0 auto;
       margin-bottom: 2.5rem;
-      max-width: 150px !important;
       height: 230px;
       object-fit: cover;
     }
@@ -31,7 +30,7 @@
     &__title{
       font-size: 2rem;
       color: $accent-white;
-      font-family: 'Bebas Neue';
+      font-family: 'BebasNeue';
       text-align: center;
       font-weight: bold;
     }
@@ -48,8 +47,11 @@
   .tab-content{
     &__item{
       display: none;
+      opacity: 0;
+      transition: .3s;
       &.active{
         display: block;
+        opacity: 1;
       }
     }
   }
@@ -91,6 +93,9 @@
       }
     }
   }
+}
+.product__link{
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 460px){
@@ -138,5 +143,46 @@
     position: absolute;
     top: 70px;
     right: 72px;
+  }
+}
+
+@media only screen and (min-width: 1400px){
+  .collections__content{
+    padding: 4.6rem 0;
+  }
+  .collections__header{
+    margin-left: 9px;
+  }
+  .collection-tabs__control{
+    top: 93px;
+    right: 0;
+  }
+  .collections .tab-control__item:not(:last-child){
+    margin-right: 3.2rem;
+  }
+  .collection-tabs__content{
+    padding: 0;
+  }
+  .collections__header{
+    margin-bottom: 3rem;
+  }
+  .collections .latest__item{
+    padding: 3.2rem 1rem 2.7rem;
+  }
+  .collections .latest__image{
+    height: 400px;
+    margin-bottom: 46px;
+  }
+  .latest__title{
+    margin-bottom: 4px;
+  }
+  .collections .latest__list .owl-nav{
+    top: 46%;
+  }
+  .collections .owl-prev{
+    left: -102px;
+  }
+  .collections .owl-next{
+    right: -102px;
   }
 }
